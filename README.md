@@ -1,14 +1,15 @@
 # About the Hill Cipher
 <b>
 METHOD<br>
-HISTORY<br>
+RRESENTATION<br>
 IMPLEMENTATION</b>
 
 ---
 ## How It Works
 
 ---
-## History
+## Presentation
+<i>GSlides Link: </i>
 
 ---
 ## Hill Cipher in Python
