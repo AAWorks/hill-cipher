@@ -24,6 +24,10 @@ def encrypt(toEncrypt: str, key: str):
     print(keyMatrixIn)
     keyMatrix = np.array(keyMatrixIn)
     print(keyMatrix)
+    result = np.matmul(keyMatrix, toProcessMatrix)
+    print(result)
+    result = np.mod(result, 26)
+    print(result)
 
 if __name__ == "__main__":
     encrypt("ACT", "GYBNQKURP")
