@@ -16,6 +16,14 @@ def encrypt(toEncrypt: str, key: str):
     print(encryptMatrixIn)
     toProcessMatrix = np.array(encryptMatrixIn)
     print(toProcessMatrix)
+    keyMatrixIn = [[]]
+    for char in key:
+        if len(keyMatrixIn[-1]) == 3:
+            keyMatrixIn.append([])
+        keyMatrixIn[-1].append(ord(char) - 65)
+    print(keyMatrixIn)
+    keyMatrix = np.array(keyMatrixIn)
+    print(keyMatrix)
 
 if __name__ == "__main__":
-    encrypt("rick", "")
+    encrypt("ACT", "GYBNQKURP")
