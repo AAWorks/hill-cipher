@@ -1,4 +1,5 @@
 import numpy as np
+import sympy as sp
 
 # Simple Hill Cipher Implementation
 
@@ -48,13 +49,9 @@ def decrypt(toDecrypt: str, key: str):
         if len(keyMatrixIn[-1]) == 3:
             keyMatrixIn.append([])
         keyMatrixIn[-1].append(ord(char) - 65)
-    print(keyMatrixIn)
-    keyMatrix = np.array(keyMatrixIn)
-    print(keyMatrix)
-    keyMatrix = np.mod(keyMatrix, 26)
-    print(keyMatrix)
-    keyMatrix = np.linalg.inv(keyMatrix)
-    print(keyMatrix)
+    sympyMatrix = sp.Matrix(keyMatrixIn)
+    sympyMatrix = sympyMatrix.inv_mod(26)
+    # sp.lambdify(vars, sympyMatrix, modules='numpy')
     
 
 if __name__ == "__main__":
