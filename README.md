@@ -1,7 +1,7 @@
 # About the Hill Cipher
 <b>
 METHOD<br>
-RRESENTATION<br>
+PRESENTATION<br>
 IMPLEMENTATION</b>
 
 ---
