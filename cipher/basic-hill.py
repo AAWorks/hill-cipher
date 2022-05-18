@@ -29,5 +29,29 @@ def encrypt(toEncrypt: str, key: str):
     result = np.mod(result, 26)
     print(result)
 
+def decrypt(toDecrypt: str, key: str):
+    toDecrypt = toDecrypt.upper()
+    key = key.upper()
+    if len(key) != len(toDecrypt) ** 2:
+        print("Key length is not string to encrypt length squared!")
+        return
+    elif len(toDecrypt) == 0:
+        print("No key inputted")
+    encryptMatrixIn = []
+    for char in toDecrypt:
+        encryptMatrixIn.append([ord(char) - 65])
+    print(encryptMatrixIn)
+    toProcessMatrix = np.array(encryptMatrixIn)
+    print(toProcessMatrix)
+    keyMatrixIn = [[]]
+    for char in key:
+        if len(keyMatrixIn[-1]) == 3:
+            keyMatrixIn.append([])
+        keyMatrixIn[-1].append(ord(char) - 65)
+    print(keyMatrixIn)
+    keyMatrix = np.array(keyMatrixIn)
+    print(np.linalg.inv(keyMatrix))
+
 if __name__ == "__main__":
-    encrypt("ACT", "GYBNQKURP")
+    # encrypt("ACT", "GYBNQKURP")
+    decrypt("ACT", "GYBNQKURP")
