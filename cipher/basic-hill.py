@@ -50,7 +50,12 @@ def decrypt(toDecrypt: str, key: str):
         keyMatrixIn[-1].append(ord(char) - 65)
     print(keyMatrixIn)
     keyMatrix = np.array(keyMatrixIn)
-    print(np.linalg.inv(keyMatrix))
+    print(keyMatrix)
+    keyMatrix = np.mod(keyMatrix, 26)
+    print(keyMatrix)
+    keyMatrix = np.linalg.inv(keyMatrix)
+    print(keyMatrix)
+    
 
 if __name__ == "__main__":
     # encrypt("ACT", "GYBNQKURP")
