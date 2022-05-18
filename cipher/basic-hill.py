@@ -51,7 +51,7 @@ def decrypt(toDecrypt: str, key: str):
         keyMatrixIn[-1].append(ord(char) - 65)
     sympyMatrix = sp.Matrix(keyMatrixIn)
     sympyMatrix = sympyMatrix.inv_mod(26)
-    # sp.lambdify(vars, sympyMatrix, modules='numpy')
+    print(np.array(sympyMatrix.tolist()))
     
 
 if __name__ == "__main__":
