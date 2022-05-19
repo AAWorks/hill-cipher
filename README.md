@@ -9,7 +9,7 @@ IMPLEMENTATION</b>
 ## What Is It?
 
 ---
-## INSTALLATION
+## Installation
 
 ---
 ## Presentation
