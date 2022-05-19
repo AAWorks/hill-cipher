@@ -1,11 +1,15 @@
 # About the Hill Cipher
 <b>
 METHOD<br>
+INSTALLATION<br>
 PRESENTATION<br>
 IMPLEMENTATION</b>
 
 ---
-## How It Works
+## What Is It?
+
+---
+## INSTALLATION
 
 ---
 ## Presentation
