@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="/landing_page">Home</a>
+              <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/machine">Encode/Decode</a>
@@ -29,24 +29,22 @@
       </nav>
   </head>
 
-  <body style="background: black;">
-    <section class="container">
-      <div class="d-flex flex-row flex-around justify-content-evenly align-items-center flex-column flex-lg-row flex-grow-0">
-      <div class="p-2 p-lg-5">
-        <h2 class="text-primary mb-4"><strong>Login</strong></h2>
-        <div>
-          {% if error %}
-          <p style="color: red">Username or password incorrect</p>
-          {% endif %}
-          <form method="post" action="/">
-            <input style="width: 300px;" type="text" name="username" placeholder="Username" class="form-control mb-3"/>
-            <input style="width: 300px;" type="password" name="password" placeholder="Password" class="form-control mb-3"/>
-            <input type="submit" name="authenticate" value="Log In" class="btn btn-primary"/>
-          </form>
-        </div>
-      </div>
-      <!-- <img src="/static/images/hamburger.svg" width="400px" height="400px"> -->
-      </div>
-    </section>
-  </body>
+</head>
+<body style="background: #495a64; color: #ffffff;">
+  <br><h1 style="text-align: center;"><strong>THE HILL CIPHER</strong><h1>
+  <h2 style="text-align: center;"><strong>Encoder/Decoder</strong></h2><br>
+  <h2 class="text-primary mb-4"><strong>INPUT PLAINTEXT/CIPHERTEXT</strong></h2>
+  <form method="post" action="/">
+    <input style="width: 300px;" type="text" name="input" placeholder="This Is Text" class="form-control mb-3"/>
+    <br>
+    <input type="text" name="field00" size="3">
+    <input type="text" name="field01" size="3">
+    <br>
+    <input type="text" name="field10" size="3">
+    <input type="text" name="field11" size="3">
+    <br>
+    <input type="submit" name="encode" value="Encode" class="btn btn-primary"/>
+    <input type="submit" name="decode" value="Decode" class="btn btn-primary"/>
+  </form>
+</body>
 </html>
