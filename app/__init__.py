@@ -5,6 +5,10 @@ app.secret_key = 'physiscmakesmesad'
 
 @app.route('/', methods=['GET','POST'])
 def landing_page():
+    return render_template("landing_page.html")
+
+@app.route('/machine', methods=['GET', 'POST'])
+def machine():
     if request.method == "GET":
         return render_template("landing_page.html")
     else:
@@ -14,10 +18,6 @@ def landing_page():
         field10 = request.form["field10"]
         field11 = request.form["field11"]
         return render_template("result_page.html")
-
-@app.route('/machine', methods=['GET', 'POST'])
-def machine():
-    return render_template("machine.html")
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
