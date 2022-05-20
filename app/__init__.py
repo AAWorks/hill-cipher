@@ -5,7 +5,15 @@ app.secret_key = 'physiscmakesmesad'
 
 @app.route('/', methods=['GET','POST'])
 def landing_page():
-    return render_template("landing_page.html")
+    if request.method == "GET":
+        return render_template("landing_page.html")
+    else:
+        text = request.form["text"]
+        field00 = request.form["field00"]
+        field01 = request.form["field01"]
+        field10 = request.form["field10"]
+        field11 = request.form["field11"]
+        return render_template("result_page.html")
 
 @app.route('/machine', methods=['GET', 'POST'])
 def machine():
