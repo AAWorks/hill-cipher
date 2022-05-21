@@ -28,7 +28,7 @@ def encrypt(toEncrypt: str, key: str):
     result = np.matmul(keyMatrix, toProcessMatrix)
     print(result)
     result = np.mod(result, 26)
-    print(result)
+    print(result) # can use result = "".join([string.ascii_lowercase[int(item[0])] for item in np.mod(result, 26)])
 
 def decrypt(toDecrypt: str, key: str):
     toDecrypt = toDecrypt.upper()
