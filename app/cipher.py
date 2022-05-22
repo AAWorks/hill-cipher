@@ -4,8 +4,9 @@ import string, itertools, random
 
 ALPHABET = string.ascii_uppercase + "0123456789"
 
-def clean(inputstr, size):
-    salt = "".join([random.choice(string.ascii_uppercase) for _ in range(len(inputstr) % size)])
+def clean(inputstr: str, size: int):
+    diff = len(inputstr) % size
+    salt = "".join([ALPHABET[x - 5] for x in range(diff)])
     return inputstr if len(inputstr) % size == 0 else inputstr + salt
 
 def encrypt(inputstr: str, keyMatrixIn: list):
