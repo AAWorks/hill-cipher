@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, session, redirect, url_for
+import numpy as np
 
 with open("app/cipher.py", "rb") as source_file:
     code = compile(source_file.read(), "app/cipher.py", "exec")
@@ -23,12 +24,13 @@ def machine():
 
 @app.route('/encode', methods=['GET', 'POST'])
 def encode():
-    text = request.form["text"].upper()
+    text = request.form["text"]
     matrix = [[request.form["00"], request.form["01"]], [request.form["10"], request.form["11"]]]
-    if text == "" or "" in matrix:
+    if "" in matrix or text == "":
         return redirect('/machine')
-    for num in matrix:
-        num = 0 if num == 0 else int(num)
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            matrix[i][j] = int(matrix[i][j])
     result = encrypt(text, matrix)
     return render_template("result_page.html", result=result)
 
