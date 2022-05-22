@@ -24,10 +24,12 @@ def machine():
 @app.route('/encode', methods=['GET', 'POST'])
 def encode():
     text = request.form["text"].upper()
-    key = request.form["key"].upper()
-    if text == "" or key == "" or len(key) != len(text) ** 2:
+    matrix = [[request.form["00"], request.form["01"]], [request.form["10"], request.form["11"]]]
+    if text == "" or "" in matrix:
         return redirect('/machine')
-    result = encrypt(text, key)
+    for num in matrix:
+        num = 0 if num == 0 else int(num)
+    result = encrypt(text, matrix)
     return render_template("result_page.html", result=result)
 
 @app.route('/decode', methods=['GET', 'POST'])
