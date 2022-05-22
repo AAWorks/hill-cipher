@@ -1,22 +1,34 @@
 import numpy as np
 import sympy as sp
-import string
+import string, itertools, random
 
 ALPHABET = string.ascii_uppercase + "0123456789"
 
-def encrypt(toEncrypt: str, key: str):
-    encryptMatrixIn = []
-    for char in toEncrypt:
-        encryptMatrixIn.append(ALPHABET.index(char))
+def clean(inputstr, size):
+    salt = "".join([random.choice(string.ascii_uppercase) for _ in range(len(inputstr) % size)])
+    return inputstr if len(inputstr) % size == 0 else inputstr + salt
+
+def encrypt(inputstr: str, keyMatrixIn: list):
+    toEncrypt=clean(inputstr.upper(), 2)
+
+    seq = [ALPHABET.index(char) for char in toEncrypt if char.isalnum()]
+    encryptMatrixIn = [seq[x::2] for x in range(2)]
     toProcessMatrix = np.array(encryptMatrixIn)
-    keyMatrixIn = [[]]
-    for char in key:
-        if len(keyMatrixIn[-1]) == 3:
-            keyMatrixIn.append([])
-        keyMatrixIn[-1].append(ALPHABET.index(char))
     keyMatrix = np.array(keyMatrixIn)
     result = np.matmul(keyMatrix, toProcessMatrix)
-    ans = "".join([ALPHABET[int(item)] for item in np.mod(result, 36)])
+    alphali1 = [ALPHABET[int(item)] for item in np.mod(result,36)[0]]
+    alphali2 = [ALPHABET[int(thing)] for thing in np.mod(result,36)[1]]
+    resultlist = [x for x in itertools.chain.from_iterable(itertools.zip_longest(alphali1,alphali2)) if x]
+    ans = ""
+    for i in range(0, len(inputstr)):
+        if toEncrypt[i].isalnum():
+            letter = resultlist.pop(0)
+            if inputstr[i].islower():
+                ans += letter.lower()
+            else:
+                ans += letter
+        else:
+            ans += toEncrypt[i]
     return ans
 
-print(encrypt("J4ck_4nd_J1ll_w3N7_up_7H3_H1Ll", "GYBNQKURP"))
+print(encrypt("J4ck_4nd_J1ll_w3n7_up_7h3_h1ll", [[101, 704], [1031, 1225]]))
