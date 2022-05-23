@@ -31,5 +31,3 @@ def encrypt(inputstr: str, keyMatrixIn: list):
         else:
             ans += toEncrypt[i]
     return ans
-
-print(encrypt("J4ck_4nd_J1ll_w3n7_up_7h3_h1ll", [[101, 704], [1031, 1225]]))
