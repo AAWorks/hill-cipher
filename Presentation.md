@@ -1,6 +1,6 @@
 # About the Hill Cipher
 
-## Encoding via the Hill Cipher
+## Encoding text
 
 Requirements to use the Hill Cipher:
 
@@ -36,3 +36,18 @@ Let the text to be encoded be ACT, and the key matrix be:
 15
 14  => POH
 7
+
+4. Profit!
+
+## Decoding text
+
+The steps are relatively similar to encoding, but there are some plot twists.
+
+Let the text to be decoded be POH, and the key matrix be:
+
+6 24 1
+13 16 10
+20 17 15
+
+0. Find the modular inverse with the modular being 26.
+   0. 
