@@ -1,5 +1,5 @@
 import numpy as np
-import sympy as sp
+from sympy import Matrix
 import string, itertools, random
 
 ALPHABET = string.ascii_uppercase + "0123456789"
@@ -31,3 +31,14 @@ def encrypt(inputstr: str, keyMatrixIn: list):
         else:
             ans += toEncrypt[i]
     return ans
+
+def matInvMod (vmnp, mod):
+    vmsym = Matrix(vmnp)
+    vmsymInv = vmsym.inv_mod(mod)
+    vmnpInv = np.array(vmsymInv)
+    return vmnpInv
+
+def decrypt(inputstr: str, keyMatrixIn: list):
+    keyMatrixIn = np.array(keyMatrixIn)
+    keyMatrix = matInvMod(keyMatrixIn, 36)
+    return encrypt(inputstr, keyMatrix)
