@@ -39,7 +39,7 @@ def encrypt(inputstr: str, keyMatrixIn: list, decoding: bool):
     if resultlist:
         ans += resultlist.pop(0)
     if decoding and ans[-1] == 'Z':
-        ans = ans[:-1] + " or " + ans
+        ans = ans[:-1]
     return ans
 
 def matInvMod (vmnp, mod):
