@@ -40,12 +40,14 @@ def encode():
             if not matrix[i][j]:
                 return redirect('/machine')
             matrix[i][j] = int(matrix[i][j])
-    result = encrypt(text, matrix) if request.form["cipher"] == "Encode" else decrypt(text, matrix)
+    result = encrypt(text, matrix, False) if request.form["cipher"] == "Encode" else decrypt(text, matrix, True)
     return redirect("/loading")
 
 @app.route('/result', methods=['GET', 'POST'])
 def result():
     try:
+        if type(result) != str:
+            return render_template('result_page.html', result="Refreshed or fiddling with the url? Either way, begone!")
         return render_template('result_page.html', result=result)
     except:
         return render_template('error.html')
