@@ -49,5 +49,10 @@ Let the text to be decoded be POH, and the key matrix be:
 13 16 10
 20 17 15
 
-0. Find the modular inverse with the modular being 26.
-   0. 
+0. Find the modular inverse with the mod being 26.
+   This can be done through the Euclidean Algorithm
+   0. Given A and B, which are two integers that we want to find the greatest common divisor of, inputted into gcd(A,B) (this function!)
+   1. If A = 0, return B and terminate
+   2. If B = 0, return A and terminate
+   3. Otherwise, let R = A % B and do gcd(B, R). This is a recursive function and will only end when either of the above cases are true
+   4. 
