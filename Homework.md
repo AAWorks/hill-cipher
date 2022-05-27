@@ -1,12 +1,12 @@
 # Homework Assignment for Students
 
 ---
-### Encrypting:
+### Encrypt the following
 <i>Plaintext<br>
 Matrix</i>
 
 ---
-John Hilliams
+1) John Hilliams
 <table>
   <tr>
     <td>19</td>
@@ -18,7 +18,7 @@ John Hilliams
   </tr>
 </table>
 
-Hill Clinton
+2) Hill Clinton
 <table>
   <tr>
     <td>-3</td>
@@ -31,12 +31,12 @@ Hill Clinton
 </table>
 
 ---
-### Decrypting:
+### Decrypt the following
 <i>Ciphertext<br>
 Matrix</i>
 
 ---
-Thwl_Gs9i6H
+3) Thwl_Gs9i6H
 <table>
   <tr>
     <td>-3</td>
@@ -48,7 +48,7 @@ Thwl_Gs9i6H
   </tr>
 </table>
 
-H3c1_cX5d_Y3U_N3842dz1r_n8Cn7tVq1v
+4) H3c1_cX5d_Y3U_N3842dz1r_n8Cn7tVq1v
 <table>
   <tr>
     <td>1</td>
@@ -61,12 +61,12 @@ H3c1_cX5d_Y3U_N3842dz1r_n8Cn7tVq1v
 </table>
 
 ---
-### Challenge:
+### Challenge: Decrypt the following
 <i>Ciphertext<br>
 Clue</i>
 
 ---
-7Vgu_Otp_G5ud_xV6Z_xp_S1K_XI9m
+5) 7Vgu_Otp_G5ud_xV6Z_xp_S1K_XI9m
 <table>
   <tr>
     <td>Ball Drop!</td>
@@ -83,7 +83,7 @@ MMDD <br>
 ---
 ## Submission:
 first, last<br>
-github @<br>
+stuy.edu email<br>
 
 1) answer1
 2) answer2
