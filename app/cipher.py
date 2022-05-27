@@ -5,7 +5,7 @@ import string, itertools
 ALPHABET = string.ascii_uppercase + "0123456789"
 
 def clean(inputstr: str, size: int):
-    return inputstr if len(inputstr) % size == 0 else inputstr + 'Z'
+    return inputstr if len(inputstr) % size == 0 else inputstr + 'QQQ'
 
 def encrypt(inputstr: str, keyMatrixIn: list, decoding: bool):
     instr = "".join([char for char in inputstr.upper() if char.isalnum()])
@@ -38,8 +38,8 @@ def encrypt(inputstr: str, keyMatrixIn: list, decoding: bool):
             ans += inputstr[i]
     if resultlist:
         ans += resultlist.pop(0)
-    if decoding and ans[-1] == 'Z':
-        ans = ans[:-1]
+    if decoding and ans[-3:] == 'QQQ':
+        ans = ans[:-3]
     return ans
 
 def matInvMod (vmnp, mod):
