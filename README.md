@@ -31,7 +31,6 @@ i.e. `http://127.0.0.1:5000/`
 
 ---
 ## Presentation
-<i>GSlides Link: </i> [Slides](https://docs.google.com/presentation/d/1omvnxZZEdCLczGai9GP337KSz2HKPxEoRIxTzDPioVs/edit#slide=id.g1023594f85a_0_80 "Slides")<br>
 <i>Presentation: </i> [Presentation.md](https://github.com/AAWorks/hill-cipher/blob/main/Presentation.md "Lesson")<br>
 <i>Homework: </i> [Homework.md](https://github.com/AAWorks/hill-cipher/blob/main/Homework.md "HW")
 
