@@ -51,8 +51,11 @@ Let the text to be decoded be POH, and the key matrix be:
 
 0. Find the modular inverse with the mod being 26.
    This can be done through the Euclidean Algorithm
-   0. Given A and B, which are two integers that we want to find the greatest common divisor of, inputted into gcd(A,B) (this function!)
+   0. Given A and B, which are two integers that we want to find the greatest common divisor of such that A < B, inputted into gcd(A,B) (this function!)
    1. If A = 0, return B and terminate
    2. If B = 0, return A and terminate
-   3. Otherwise, let R = A % B and do gcd(B, R). This is a recursive function and will only end when either of the above cases are true
-   4. 
+   3. Otherwise, list out A = A / B + A % B, and do gcd(B, A % B)
+   4. Keep on doing this till either 1 or 2 is fulfilled. This is the real gcd(A, B)
+   5. Rewrite the listed equations that have a remainder such that the remainder is isolated.
+   6. Starting from the bottom of the list of rewritten equations, substitute the equation above into the bottom of the list of rewritten equations and keep it on the bottom. Remove the equation above the bottom of the equation and repeat this till the bottom equation is the one remaining.
+   7. You should get an equation in the format of au + bv = d, where d is the last nonzero remainder that you got in step 4, and a and b are the original inputs into the gcd function. u and v are the other factors that we just got (not what we started out with). We can safely ignore v and u is the modular inverse. (There are some weird and insane steps that are relevant to if a is greater than b, but we won't get to that).
