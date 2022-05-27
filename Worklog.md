@@ -45,7 +45,7 @@ alejandroA -- 2022-05-26 -- Homework.md is done. Added to devlog.
 <br><br>
 linAndy -- 2022-05-26 -- Initial repo setup
 <br><br>
-alejandroA -- 2022-05-27 -- Added to and formatted worklog.
+alejandroA -- 2022-05-27 -- Added to and formatted worklog. Formatted HW file.
 <br><br>
 linAndy -- 2022-05-27 -- Initial repo setup
 <br><br>
