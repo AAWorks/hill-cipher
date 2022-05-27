@@ -50,6 +50,9 @@ Let the text to be decoded be POH, and the key matrix be:
 20 17 15
 
 0. Find the modular inverse with the mod being 26.
+   0. Some initialization steps though:
+      0. Make an identity matrix, like this
+      1. Manipulate the original and identity matrix such that the original matrix becomes the identity matrix. Operations should apply to both the original and identity matrixes.
    This can be done through the Euclidean Algorithm
    0. Given A and B, which are two integers that we want to find the greatest common divisor of such that A < B, inputted into gcd(A,B) (this function!)
    1. If A = 0, return B and terminate
@@ -59,3 +62,6 @@ Let the text to be decoded be POH, and the key matrix be:
    5. Rewrite the listed equations that have a remainder such that the remainder is isolated.
    6. Starting from the bottom of the list of rewritten equations, substitute the equation above into the bottom of the list of rewritten equations and keep it on the bottom. Remove the equation above the bottom of the equation and repeat this till the bottom equation is the one remaining.
    7. You should get an equation in the format of au + bv = d, where d is the last nonzero remainder that you got in step 4, and a and b are the original inputs into the gcd function. u and v are the other factors that we just got (not what we started out with). We can safely ignore v and u is the modular inverse. (There are some weird and insane steps that are relevant to if a is greater than b, but we won't get to that).
+1. Perform matrix multiplication
+2. Do modulo 26 to the matrix
+3. Convert the matrix contents to alphabetical characters, going from top to bottom.
