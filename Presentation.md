@@ -9,7 +9,7 @@ Requirements to use the Hill Cipher:
 
 Let the text to be encoded be ACT, and the key matrix be:
 
-<img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}6&space;&&space;4&space;&&space;21\\&space;13&space;&&space;16&space;&&space;10\\&space;20&space;&&space;17&space;&&space;15\end{bmatrix}">
+<img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}6&space;&&space;24&space;&&space;21\\&space;13&space;&&space;16&space;&&space;10\\&space;20&space;&&space;17&space;&&space;15\end{bmatrix}">
 
 0. Put the index of all the characters of the text in a vertical matrix, from left to right. For example, ACT would be placed in the vector like this:
 
@@ -38,71 +38,6 @@ Let the text to be decoded be POH, and the key matrix be:
 <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}6&space;&&space;24&space;&&space;21\\&space;13&space;&&space;16&space;&&space;10\\&space;20&space;&&space;17&space;&&space;15\end{bmatrix}">
 
 0. Find the modular inverse with the mod being 26.
-
-   0. Some initialization steps though:
-
-      0. Make an identity matrix, like this
-
-
-         <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}6&space;&&space;24&space;&&space;21&space;\\13&space;&&space;16&space;&&space;10&space;\\20&space;&&space;17&space;&&space;15&space;\\\end{bmatrix}\begin{bmatrix}1&space;&&space;0&space;&&space;0&space;\\0&space;&&space;1&space;&&space;0&space;\\0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}&space;">
-
-      1. Manipulate the original and identity matrix such that the original matrix becomes the identity matrix. Operations should apply to both the original and identity matrixes.
-
-         <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}1&space;&&space;4&space;&&space;\frac{7}{2}&space;\\13&space;&&space;16&space;&&space;10&space;\\20&space;&&space;17&space;&&space;15&space;\\\end{bmatrix}\begin{bmatrix}\frac{1}{6}&space;&&space;0&space;&&space;0&space;\\0&space;&&space;1&space;&&space;0&space;\\0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}&space;">
-
-         <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}1&space;&&space;4&space;&&space;\frac{7}{2}&space;\\0&space;&&space;-36&space;&&space;-\frac{71}{2}&space;\\20&space;&&space;17&space;&&space;15&space;\\\end{bmatrix}\begin{bmatrix}\frac{1}{6}&space;&&space;0&space;&&space;0&space;\\-\frac{13}{6}&space;&&space;1&space;&&space;0&space;\\0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}&space;">
-
-         <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}1&space;&&space;4&space;&&space;\frac{7}{2}&space;\\0&space;&&space;-36&space;&&space;-\frac{71}{2}&space;\\0&space;&&space;-63&space;&&space;-55&space;\\\end{bmatrix}\begin{bmatrix}\frac{1}{6}&space;&&space;0&space;&&space;0&space;\\-\frac{13}{6}&space;&&space;1&space;&&space;0&space;\\-\frac{10}{3}&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}&space;">
-
-         <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}1&space;&&space;4&space;&&space;\frac{7}{2}&space;\\0&space;&&space;1&space;&&space;\frac{71}{72}&space;\\0&space;&&space;-63&space;&&space;-55&space;\\\end{bmatrix}\begin{bmatrix}\frac{1}{6}&space;&&space;0&space;&&space;0&space;\\\frac{13}{216}&space;&&space;-\frac{1}{36}&space;&&space;0&space;\\-\frac{10}{3}&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}&space;">
-
-         <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}1&space;&&space;0&space;&&space;-\frac{4}{9}&space;\\0&space;&&space;1&space;&&space;\frac{71}{72}&space;\\0&space;&&space;-63&space;&&space;-55&space;\\\end{bmatrix}\begin{bmatrix}-\frac{2}{27}&space;&&space;\frac{1}{9}&space;&&space;0&space;\\\frac{13}{216}&space;&&space;-\frac{1}{36}&space;&&space;0&space;\\-\frac{10}{3}&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}&space;">
-
-         <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}1&space;&&space;0&space;&&space;-\frac{4}{9}&space;\\0&space;&&space;1&space;&&space;\frac{71}{72}&space;\\0&space;&&space;0&space;&&space;\frac{57}{8}&space;\\\end{bmatrix}\begin{bmatrix}-\frac{2}{27}&space;&&space;\frac{1}{9}&space;&&space;0&space;\\\frac{13}{216}&space;&&space;-\frac{1}{36}&space;&&space;0&space;\\\frac{11}{24}&space;&&space;-\frac{7}{4}&space;&&space;1\end{bmatrix}&space;">
-
-         <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}1&space;&&space;0&space;&&space;-\frac{4}{9}&space;\\0&space;&&space;1&space;&&space;\frac{71}{72}&space;\\0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}\begin{bmatrix}-\frac{2}{27}&space;&&space;\frac{1}{9}&space;&&space;0&space;\\\frac{13}{216}&space;&&space;-\frac{1}{36}&space;&&space;0&space;\\\frac{11}{171}&space;&&space;-\frac{14}{57}&space;&&space;\frac{8}{57}&space;\\\end{bmatrix}&space;">
-
-         <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}1&space;&&space;0&space;&&space;0&space;\\0&space;&&space;1&space;&&space;\frac{71}{72}&space;\\0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}\begin{bmatrix}-\frac{70}{1539}&space;&&space;\frac{1}{513}&space;&&space;\frac{32}{513}&space;\\\frac{13}{216}&space;&&space;-\frac{1}{36}&space;&&space;0&space;\\\frac{11}{171}&space;&&space;-\frac{14}{57}&space;&&space;\frac{8}{57}&space;\\\end{bmatrix}">
-
-         <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}1&space;&&space;0&space;&&space;0&space;\\0&space;&&space;1&space;&&space;0&space;\\0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}\begin{bmatrix}-\frac{70}{1539}&space;&&space;\frac{1}{513}&space;&&space;\frac{32}{513}&space;\\-\frac{5}{1539}&space;&&space;\frac{110}{513}&space;&&space;-\frac{71}{513}&space;\\\frac{11}{171}&space;&&space;-\frac{14}{57}&space;&&space;\frac{8}{57}&space;\\\end{bmatrix}">
-
-   Now, let's use the Euclidean Algorithm (only one here because we don't want to bore you)
-   1. Given A, the number we want to find the modular inverse for, and B, the modular number, which both are integers that we want to find the greatest common divisor of such that A < B, inputted into gcd(A,B) (this function!)
-
-   GCD(17,26)
-   1. If A = 0, return B and terminate
-   2. If B = 0, return A and terminate
-   3. Otherwise, list out A = (A / B) * B + A % B, and do gcd(B, A % B)
-   4. Keep on doing this till either 1 or 2 is fulfilled. This is the real gcd(A, B)
-      gcd(17, 26) 17 = 17/26 + 17%26 = 0 + 17
-
-      gcd(26, 17) 26 = 17*1 + 9
-
-      gcd(17, 9) 17 = 9*1 + 8
-
-      gcd(9, 8) 9 = 8*1 + 1
-      
-      gcd(8,1) 8 = 1*8 + 0
-
-   5. Rewrite the listed equations that have a remainder such that the remainder is isolated.
-
-      17 = 17
-
-      9 = 26 - 17*1
-
-      8 = 17 - 9*1
-
-      1 = 9 - 8*1
-
-   6. Starting from the bottom of the list of rewritten equations, substitute the equation above into the bottom of the list of rewritten equations and keep it on the bottom. Remove the equation above the bottom of the equation and repeat this till the bottom equation is the one remaining.
-
-      1 = 9 - (17 - 9\*1)*1 = (2)9 - 17
-
-      1 = (2)(26 - 17*1) - 17 = (2)26 - (3)17
-
-      1 = (2)26 - (3)17
-
-   7. You should get an equation in the format of au + bv = d, where d is the last nonzero remainder that you got in step 4, and a and b are the original inputs into the gcd function. u and v are the other factors that we just got (not what we started out with). We can safely ignore v and u is the modular inverse. (There are some weird and insane steps that are relevant to if a is greater than b, but we won't get to that).
 1. Perform matrix multiplication
 2. Do modulo 26 to the matrix
 3. Convert the matrix contents to alphabetical characters, going from top to bottom.
