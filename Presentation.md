@@ -38,6 +38,17 @@ Let the text to be decoded be POH, and the key matrix be:
 <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}6&space;&&space;24&space;&&space;21\\&space;13&space;&&space;16&space;&&space;10\\&space;20&space;&&space;17&space;&&space;15\end{bmatrix}">
 
 0. Find the modular inverse with the mod being 26.
+
+   <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}6&space;&&space;24&space;&&space;1&space;\\13&space;&&space;16&space;&&space;10&space;\\20&space;&&space;17&space;&&space;15&space;\\\end{bmatrix}^{-1}(\textup{mod&space;}&space;26)&space;\equiv&space;\begin{bmatrix}8&space;&&space;5&space;&&space;10&space;\\21&space;&&space;8&space;&&space;21&space;\\21&space;&&space;12&space;&&space;8&space;\\\end{bmatrix}">
+   
 1. Perform matrix multiplication
+
+   <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}8&space;&&space;5&space;&&space;10&space;\\21&space;&&space;8&space;&&space;21&space;\\21&space;&&space;12&space;&&space;8&space;\\\end{bmatrix}\begin{bmatrix}15&space;\\14&space;\\7\end{bmatrix}=\begin{bmatrix}260&space;\\574&space;\\539\end{bmatrix}">
+
 2. Do modulo 26 to the matrix
+
+   <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}260&space;\\574&space;\\539\end{bmatrix}&space;\equiv&space;\begin{bmatrix}0&space;\\2&space;\\19\end{bmatrix}(\textup{mod&space;}&space;26)">
+
 3. Convert the matrix contents to alphabetical characters, going from top to bottom.
+
+   <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}0&space;\\2&space;\\19\end{bmatrix}\to&space;ACT">
