@@ -52,6 +52,6 @@ alejandroA -- 2022-05-30 -- Added resources.
 Inverse Modular Matrices - [Stack Overflow](https://stackoverflow.com/questions/4287721/easiest-way-to-perform-modular-matrix-inversion-with-python)<br>
 General Background - [Wikipedia](https://en.wikipedia.org/wiki/Hill_cipher)<br>
 Specific Method Implementation - [dcode](https://www.dcode.fr/hill-cipher)<br>
-Background for Creator - [historyoflinearalgebra](http://historyoflinearalgebra.weebly.com/lester-s-hill-jdr.html)
-Modular Inverse - [mathworld](https://mathworld.wolfram.com/ModularInverse.html)
+Background for Creator - [historyoflinearalgebra](http://historyoflinearalgebra.weebly.com/lester-s-hill-jdr.html)<br>
+Modular Inverse - [mathworld](https://mathworld.wolfram.com/ModularInverse.html)<br>
 Modular Inverse - [youtube](https://www.youtube.com/watch?v=Rd2-EmS26uw)
