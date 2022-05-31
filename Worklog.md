@@ -37,7 +37,7 @@ linAndy -- 2022-05-25 -- Tried to read up on modular inverse and tried to make i
 <br><br>
 alejandroA -- 2022-05-26 -- Homework.md is done. Added to devlog.
 <br><br>
-linAndy -- 2022-05-26 -- More hair-ripping reading of modular inverse. However, I had some issues parsing out the instructions and trying to figiure it out myself
+linAndy -- 2022-05-26 -- More hair-ripping reading of modular inverse. However, I had some issues parsing out the instructions and trying to figure it out myself
 <br><br>
 alejandroA -- 2022-05-27 -- Added to and formatted worklog. Formatted HW file.
 <br><br>
