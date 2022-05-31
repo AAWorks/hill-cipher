@@ -15,10 +15,20 @@
 
 One of the most important things involved in the Hill Cipher is matrix multiplication. As a refresher:
 
-- You need two matrixes, called A and B
+- You need two matrixes, A and B
 - Width of matrix A needs to be equal to the height of matrix B
 - The resulting matrix will be the height of matrix A and the width of matrix B
-- Each slot is the dot product of the corresponding row values of matrix A and column values of matrix B
+- Each slot is the dot product of the corresponding row values of matrix A and column values of matrix B (if this doesn't make sense right now, just pay attention to the example I'll show y'all)
+
+For example, given matrix A, a 2x3 matrix, and matrix B, a 3x6 matrix, shown below:
+
+<img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}1&space;&&space;2&space;&&space;3&space;\\4&space;&&space;5&space;&&space;6&space;\\\end{bmatrix}\begin{bmatrix}7&space;&&space;8&space;&&space;9&space;&&space;0&space;&&space;1&space;&&space;2&space;\\3&space;&&space;4&space;&&space;5&space;&&space;6&space;&&space;7&space;&&space;8&space;\\9&space;&&space;0&space;&&space;1&space;&&space;2&space;&&space;3&space;&&space;4&space;\\\end{bmatrix}&space;">
+
+If you do A*B (matrix multiplication of A and B), this is the resulting matrix:
+
+<img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}1*7&space;&plus;&space;2*3&space;&plus;&space;3*9&space;&&space;1*8&space;&plus;&space;2*4&space;&plus;&space;3*0&space;&&space;1*9&space;&plus;&space;2*5&space;&plus;&space;3*1&space;&&space;1*0&space;&plus;&space;2*7&space;&plus;&space;3*3&space;&&space;1*1&space;&plus;&space;2*7&space;&plus;&space;3*3&space;&&space;1*2&space;&plus;&space;2*8&space;&plus;&space;3*4&space;\\4*7&space;&plus;&space;5*3&space;&plus;&space;6*9&space;&&space;4*8&space;&plus;&space;5*4&space;&plus;&space;6*0&space;&&space;4*9&space;&plus;&space;5*5&space;&plus;6*1&space;&&space;4*0&space;&plus;&space;5*6&space;&plus;&space;6*2&space;&&space;4*1&space;&plus;&space;5*7&space;&plus;&space;6*3&space;&&space;4*2&space;&plus;&space;5*8&space;&plus;&space;6*4&space;\\\end{bmatrix}">
+
+Note that matrix multiplication is not commutative, even if the A and B have the same dimensions. This means that A and B cannot be swapped around (like in normal multiplication).
 
 ## Encoding text
 
