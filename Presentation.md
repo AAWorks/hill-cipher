@@ -1,3 +1,14 @@
+<!-- Just to make latex readable in the dark -->
+
+<style>
+    img{
+        background-color: white;
+        padding-right: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+</style>
+
 # About the Hill Cipher
 
 ## Matrix Multiplication
@@ -8,7 +19,6 @@ One of the most important things involved in the Hill Cipher is matrix multiplic
 - Width of matrix A needs to be equal to the height of matrix B
 - The resulting matrix will be the height of matrix A and the width of matrix B
 - Each slot is the dot product of the corresponding row values of matrix A and column values of matrix B
-
 
 ## Encoding text
 
