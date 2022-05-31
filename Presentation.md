@@ -32,12 +32,12 @@ If you do A*B (matrix multiplication of A and B), this is the resulting matrix:
 
 Note that matrix multiplication is not commutative, even if the A and B have the same dimensions. This means that A and B cannot be swapped around (like in normal multiplication).
 
+## Requirements to use the Hill Cipher (the original version)
+
+- an alphabetical text to encode via the cipher. All letters should be in the same case for ease of use. Numbers are not allowed in the original implementaion, but we have some tricks up our sleeves...
+- The matrix should have a modular inverse. If there is no modualar inverse for the matrix, then you won't be able to decode the ciphertext and the encoded text is just as useful as a md5 hash (lol!). We also have some tricks up our sleeves for this....
+
 ## Encoding text
-
-Requirements to use the Hill Cipher:
-
-- a text to encode via the cipher
-- a key matrix that is as long as the text to encode, squared
 
 Let the text to be encoded be ACT, and the key matrix be:
 
