@@ -28,6 +28,8 @@ If you do A*B (matrix multiplication of A and B), this is the resulting matrix:
 
 <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}1*7&space;&plus;&space;2*3&space;&plus;&space;3*9&space;&&space;1*8&space;&plus;&space;2*4&space;&plus;&space;3*0&space;&&space;1*9&space;&plus;&space;2*5&space;&plus;&space;3*1&space;&&space;1*0&space;&plus;&space;2*7&space;&plus;&space;3*3&space;&&space;1*1&space;&plus;&space;2*7&space;&plus;&space;3*3&space;&&space;1*2&space;&plus;&space;2*8&space;&plus;&space;3*4&space;\\4*7&space;&plus;&space;5*3&space;&plus;&space;6*9&space;&&space;4*8&space;&plus;&space;5*4&space;&plus;&space;6*0&space;&&space;4*9&space;&plus;&space;5*5&space;&plus;6*1&space;&&space;4*0&space;&plus;&space;5*6&space;&plus;&space;6*2&space;&&space;4*1&space;&plus;&space;5*7&space;&plus;&space;6*3&space;&&space;4*2&space;&plus;&space;5*8&space;&plus;&space;6*4&space;\\\end{bmatrix}">
 
+<img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}40&space;&&space;16&space;&&space;22&space;&&space;18&space;&&space;24&space;&&space;30&space;\\97&space;&&space;52&space;&&space;67&space;&&space;42&space;&&space;57&space;&&space;72&space;\\\end{bmatrix}">
+
 Note that matrix multiplication is not commutative, even if the A and B have the same dimensions. This means that A and B cannot be swapped around (like in normal multiplication).
 
 ## Encoding text
