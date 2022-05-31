@@ -84,6 +84,11 @@ Let the text to be decoded be POH, and the key matrix be:
 3. Convert the matrix contents to alphabetical characters, going from top to bottom.
 
    <img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}0&space;\\2&space;\\19\end{bmatrix}\to&space;ACT">
+
+## What about longer strings?
+
+- Split the input string up into matrix row length sized pieces substrings and repeatedly do the encryption or decryption steps for each substring and combine at the end.
+
 ## Our Implementation
 
 - The inital implementaion of the Hill Cipher is a mostly faithful remake (no, not the faithful the Pokemon company said with the gen 4 remakes, an actual faithful remake) of the Hill Cipher, with the same limitations of the Hill Cipher. We did take the liberty of making all chars all caps just to make our lives easier, but beyond that and the fact that the matrix row and column count must be the same length as the input string, it functions the same.
