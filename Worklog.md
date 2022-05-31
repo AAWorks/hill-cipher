@@ -55,3 +55,5 @@ Specific Method Implementation - [dcode](https://www.dcode.fr/hill-cipher)<br>
 Background for Creator - [historyoflinearalgebra](http://historyoflinearalgebra.weebly.com/lester-s-hill-jdr.html)
 Modular Inverse - [mathworld](https://mathworld.wolfram.com/ModularInverse.html)
 Modular Inverse - [youtube](https://www.youtube.com/watch?v=Rd2-EmS26uw)
+Matrix Multiplication Calculator - [reshish](https://matrix.reshish.com/multiplication.php)
+Matrix Inverse Calculator - [reshish](https://matrix.reshish.com/inverse.php)
