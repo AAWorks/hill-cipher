@@ -44,3 +44,14 @@ alejandroA -- 2022-05-27 -- Added to and formatted worklog. Formatted HW file.
 linAndy -- 2022-05-27 -- Decided to remove the inverse mod, because that would take a crapton of time we don't have and I don't think even Mr. Jaishankar would be willing to teach it in 15 minutes lol. Added some info on matrix multiplication, but not finished yet.
 <br><br>
 linAndy -- 2022-05-30 -- Tested out the flask site to see if there were any issues with navigations and such and fixed a navigation issue. Fixed an issue where a header gave inherently incorrect information for the capabilities of the site. Split off readme into more sections (about requirements and some edge cases). Added an implementation section. Some resoruce prepping for me if I have time for teaching the inefficient method of finding modular inverse.
+<br><br>
+alejandroA -- 2022-05-30 -- Added resources.
+<br><br>
+
+## Resources
+Inverse Modular Matrices - [Stack Overflow](https://stackoverflow.com/questions/4287721/easiest-way-to-perform-modular-matrix-inversion-with-python)<br>
+General Background - [Wikipedia](https://en.wikipedia.org/wiki/Hill_cipher)<br>
+Specific Method Implementation - [dcode](https://www.dcode.fr/hill-cipher)<br>
+Background for Creator - [historyoflinearalgebra](http://historyoflinearalgebra.weebly.com/lester-s-hill-jdr.html)
+Modular Inverse - [mathworld](https://mathworld.wolfram.com/ModularInverse.html)
+Modular Inverse - [youtube](https://www.youtube.com/watch?v=Rd2-EmS26uw)
