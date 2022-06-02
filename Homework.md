@@ -78,7 +78,7 @@ Clue</i>
   </tr>
 </table>
 MMDD <br>
-<i>haha get it</i>
+<i>haha get it, it's DATES</i>
 
 ---
 ## Submission:
